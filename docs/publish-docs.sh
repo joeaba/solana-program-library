@@ -21,8 +21,8 @@ cat > "$CONFIG_FILE" <<EOF
 }
 EOF
 
-[[ -n $VERCEL_TOKEN ]] || {
+[[ -n $VERCEL_TOKEN1 ]] || {
   echo "VERCEL_TOKEN is undefined.  Needed for Vercel authentication."
   exit 1
 }
-vercel deploy . --local-config="$CONFIG_FILE" --confirm --token "$VERCEL_TOKEN" "$PRODUCTION"
+vercel deploy . --local-config="$CONFIG_FILE" --confirm --token "$VERCEL_TOKEN1" "$PRODUCTION"
