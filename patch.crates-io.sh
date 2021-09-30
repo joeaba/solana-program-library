@@ -2,7 +2,6 @@
 #
 # Patches the SPL crates for developing against a local solana monorepo
 #
-
 solana_dir=$1
 if [[ -z $solana_dir ]]; then
   echo "Usage: $0 <path-to-solana-monorepo>"
