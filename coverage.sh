@@ -2,7 +2,6 @@
 #
 # Runs all program tests and builds a code coverage report
 #
-
 set -e
 cd "$(dirname "$0")"
 
