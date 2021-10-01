@@ -7,6 +7,8 @@ if [[ -d .vercel ]]; then
 fi
 
 CONFIG_FILE=vercel.json
+cat vercel.json
+
 PROJECT_NAME=spl-solana-com
 
 PRODUCTION=
