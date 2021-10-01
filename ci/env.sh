@@ -6,6 +6,7 @@
 
 if [[ -n $CI ]]; then
   export CI=1
+  export CI_BRANCH=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
   if [[ -n $TRAVIS ]]; then
     export CI_BRANCH=$TRAVIS_BRANCH
     export CI_BASE_BRANCH=$TRAVIS_BRANCH
