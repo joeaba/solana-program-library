@@ -7,7 +7,7 @@ if [[ -d .vercel ]]; then
 fi
 
 CONFIG_FILE=vercel.json
-PROJECT_NAME=spl-solana-program-library
+PROJECT_NAME=solana-program-library
 
 PRODUCTION=
 if [[ -n "$CI" ]]; then
