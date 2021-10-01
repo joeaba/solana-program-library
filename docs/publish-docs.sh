@@ -11,7 +11,7 @@ CONFIG_FILE=vercel.json
 # cat vercel.json
 # echo vercel.json
 
-PROJECT_NAME=solana-program-library
+PROJECT_NAME=spl-solana-com
 
 PRODUCTION=
 if [[ -n "$CI" ]]; then
