@@ -19,8 +19,6 @@ jobs:
         name: "Build Docs"
       - run: |
          cd docs/
-         touch .env
-         echo VERCEL_TOKEN =${{ secrets.VERCEL_TOKEN }} > .env
          source .travis/before_install.sh
          npm ci
          source .travis/script.sh
