@@ -21,7 +21,7 @@ fi
 cat > "$CONFIG_FILE" <<EOF
 {
   "name": "$PROJECT_NAME",
-  "scope": "Solana-labs"
+  "scope": "solana-labs"
 }
 EOF
 # echo "$CONFIG_FILE" 
