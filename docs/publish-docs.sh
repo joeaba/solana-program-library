@@ -7,7 +7,7 @@ if [[ -d .vercel ]]; then
 fi
 
 CONFIG_FILE=vercel.json
-PROJECT_NAME=solana-program-library
+PROJECT_NAME=spl-solana-com
 
 PRODUCTION=
 if [[ -n "$CI" ]]; then
@@ -17,7 +17,7 @@ fi
 cat > "$CONFIG_FILE" <<EOF
 {
   "name": "$PROJECT_NAME",
-  "scope": "joeaba"
+  "scope": "solana-labs"
 }
 EOF
 
