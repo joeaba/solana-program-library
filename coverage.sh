@@ -92,3 +92,4 @@ ls -l target/cov/$reportName/index.html
 ln -sfT $reportName target/cov/LATEST
 
 exit $test_status
+
