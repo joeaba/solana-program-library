@@ -1,0 +1,17 @@
+name : deploy
+on:
+  workflow_run:
+    workflows: ["build"]
+    types: 
+      - completed
+jobs:
+   deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v2
+        name:  deploying
+        run : |
+          source .travis/script.sh
+        env:
+           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
