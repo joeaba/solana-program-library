@@ -5,15 +5,21 @@ on:
     types: 
       - completed
 jobs:
-   deploy:
+  deploy: 
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v2
-      - name:  deploying
-        run : |
-          npm ci
-          cd docs/
-          source .travis/script.sh
-        env:
-           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        name: "importing all the document"
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+#         if: ${{ github.event_name == ('push' || 'pull_request')}} && ${{github.ref == 'master'}}
+        name: "Build Docs"
+      - run: |
+         .travis/affects.sh docs/ .travis || exit 0
+         cd docs/
+         source .travis/before_install.sh
+         npm ci
+         source .travis/script.sh
+
