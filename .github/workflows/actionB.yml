@@ -23,4 +23,7 @@ jobs:
          source .travis/before_install.sh
          npm ci
          source .travis/script.sh
+ 
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
 
