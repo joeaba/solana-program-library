@@ -10,7 +10,7 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v2
-        name:  deploying
+      - name:  deploying
         run : |
           source .travis/script.sh
         env:
