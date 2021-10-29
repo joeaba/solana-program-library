@@ -12,6 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - name:  deploying
         run : |
+          npm ci
           cd docs/
           source .travis/script.sh
         env:
