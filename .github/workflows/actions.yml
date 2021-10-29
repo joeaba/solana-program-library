@@ -20,8 +20,8 @@ jobs:
          .travis/affects.sh docs/ .travis || exit 0
          cd docs/
          source .travis/before_install.sh
-        
-        # source .travis/script.sh
+         npm ci
+         source .travis/script.sh
         #env:
           #VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         
