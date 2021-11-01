@@ -10,3 +10,4 @@ wallet = "~/.config/solana/id.json"
 
 [programs.mainnet]
 spl_governance = "GoVEr6xcF9QGrRFJC4kt9wiCdNqZzrG7KWdrm7viDnpa"
+
